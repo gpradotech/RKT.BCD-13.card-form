@@ -1,0 +1,55 @@
+button {
+  padding: 16px 48px;
+  border-radius: 4px;
+  height: 56px;
+  
+  border: none;
+  background: #9333EA;
+  color: #F9FAFB;
+  
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.125rem;
+  line-height: 2;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.2s linear;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button span.loading {
+  animation: spin 1s linear infinite;
+}
+
+button:hover:not(:disabled) {
+  background: #A855F7;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:focus-visible {
+  outline: 2px solid #F9FAFB;
+  outline-offset: 4px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

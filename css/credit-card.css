@@ -1,0 +1,151 @@
+/*//////////////////////////////////////////////////////////
+GLOBAL -----------------------------------------------------
+//////////////////////////////////////////////////////////*/
+.card__container {
+  position: relative;
+  width: 280px;
+  height: 168px;
+  border-radius: 16px;
+}
+
+.card {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(17, 24, 39, 0.4);
+  color: #F9FAFB;
+  font-family: "Share Tech Mono", monospace;
+  
+  transform-style: preserve-3d;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease;
+
+  cursor: pointer;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+
+/*//////////////////////////////////////////////////////////
+FRONT ------------------------------------------------------
+//////////////////////////////////////////////////////////*/
+.card__front {
+  position: absolute;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  border-radius: 16px;
+  
+  background: url("./../img/card__bg-front.png");
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card__front-content {
+  height: inherit;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.card__front-top-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card__front-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__front-number,
+.card__front-validity {
+  display: flex;
+  gap: 4px;
+}
+
+.card__front-number span,
+.card__front-validity span {
+  opacity: 0.5;
+}
+
+.card__front-bottom-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.card__front-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.card__front-validity {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+
+/*//////////////////////////////////////////////////////////
+BACK -------------------------------------------------------
+//////////////////////////////////////////////////////////*/
+.card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: url("./../img/card__bg-back.png");
+
+  color: #fafafa;
+  transform: rotateY(180deg);
+  border-radius: 16px;
+
+  padding: 24px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.card__back-stripe {
+  position: absolute;
+  top: 16px;
+  width: 100%;
+  height: 32px;
+  background: #111827;
+}
+
+.card__back-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  gap: 8px;
+  font-size: 14px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__cvv {
+  background: #D1D5DB;
+  color: #111827;
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  gap: 4px;
+  justify-content: right;
+}
+
+.card__cvv span {
+  opacity: 0.5;
+}

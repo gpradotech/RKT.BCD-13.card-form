@@ -1,0 +1,69 @@
+/*//////////////////////////////////////////////////////////
+RESET ------------------------------------------------------
+//////////////////////////////////////////////////////////*/
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*//////////////////////////////////////////////////////////
+GLOBAL ----------------------------------------------------
+//////////////////////////////////////////////////////////*/
+body {
+  background: #111827;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+}
+
+:focus-visible {
+  outline: 2px solid #F9FAFB;
+  outline-offset: 4px;
+}
+
+.app__container {
+  width: 736px;
+  background: #1F2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 32px;
+  display: grid;
+  gap: 48px;
+}
+
+.app__columns {
+  display: flex;
+  gap: 64px;
+}
+
+.app__column-1 {
+  flex: 1;
+  min-width: 328px;
+}
+
+.app__column-2 {
+  display: grid;
+  gap: 32px;
+  justify-content: center;
+  flex: 1;
+}
+
+.safe__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #E5E7EB;
+  font-size: 0.875rem;
+}

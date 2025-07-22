@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .app__container {
+    width: calc(100vw - 32px);
+    padding: 16px;
+  }
+
+  .app__columns {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+}

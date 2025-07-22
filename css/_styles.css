@@ -1,0 +1,8 @@
+@import "./global.css";
+
+@import "./form__container.css";
+@import "./form__input.css";
+@import "./credit-card.css";
+@import "./button.css";
+
+@import "./responsiveness.css"
