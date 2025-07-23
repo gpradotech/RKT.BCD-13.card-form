@@ -1,4 +1,4 @@
-import { formButton, formButtonElement, formNumber, formName, formValidity, formCvv } from './components.js'
+import { formButton, formButtonElement, formNumber, formName, formValidity, formCvv, cardNumber, cardName, cardValidity, cardCvv, card } from './components.js'
 
 export function formButtonLoading() {
   formButton.addEventListener('click', (event) => {
@@ -16,11 +16,43 @@ export function formButtonLoading() {
       formValidity.value = ''
       formCvv.value = ''
 
+      // Foca no campo de número do cartão após o carregamento
+      formNumber.focus()
+
+      // Limpa os dados do cartão após o carregamento
+      // Remove os dados do cartão após o botão ser clicado
+      if(formButton.getAttribute('disabled') === null) {
+        // Cria um loop para remover os elementos do cartão
+        for(let i = 0; i < cardNumber.length; i++) {
+          for(let j = 0; j < cardNumber[i].children.length; j++) {
+            cardNumber[i].children[j].textContent = '•'
+            cardNumber[i].children[j].style.opacity = 0.5
+          }
+        }
+        
+        // Remove o nome do cartão após o carregamento
+        cardName.textContent = "Seu nome aqui"
+        cardName.style.opacity = 0.5
+        
+        // Cria um loop para remover a data de validade do cartão após o carregamento
+        for(let i = 0; i < cardValidity.children.length; i++) {
+          cardValidity.children[i].textContent = '•'
+          cardValidity.children[i].style.opacity = 0.5
+
+          if(i === 2) {
+            continue
+          }
+          cardValidity.children[2].textContent = '/'
+        }
+
+        // Remove o CVV do cartão após o carregamento
+        cardCvv.textContent = '•••'
+        cardCvv.style.opacity = 0.5
+      }
+
       // Desabilita o botão após a simulação de carregamento
       formButton.setAttribute('disabled', true)
     }, 1000)
-
-
   })
 }
 formButtonLoading()
