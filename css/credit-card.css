@@ -8,6 +8,13 @@ GLOBAL -----------------------------------------------------
   border-radius: 16px;
 }
 
+@media (max-width: 375px) {
+  .card__container {
+    width: 224px;
+    height: 134.4px;
+  }
+}
+
 .card {
   position: absolute;
   

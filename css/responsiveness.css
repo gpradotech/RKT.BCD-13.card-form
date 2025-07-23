@@ -1,11 +1,36 @@
 @media (max-width: 768px) {
+  body {
+    align-items: start;
+  }
+  
+  button {
+    width: calc(100vw - 64px);
+    margin: 0 auto;
+  }
+  
   .app__container {
     width: calc(100vw - 32px);
     padding: 16px;
+    margin-top: 24px;
+    justify-content: center;
+    margin-bottom: 32px;
   }
 
   .app__columns {
     flex-direction: column-reverse;
     gap: 32px;
+    width: inherit;
+    align-items: center;
+    padding: 0 16px;
   }
+
+  .app__column-1 {
+    max-width: calc(100vw - 64px);
+    width: inherit;
+  }
+
+  .app__column-2 {
+    width: calc(100vw - 64px);
+  }
+
 }

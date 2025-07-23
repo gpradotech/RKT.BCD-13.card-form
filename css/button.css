@@ -2,6 +2,7 @@ button {
   padding: 16px 48px;
   border-radius: 4px;
   height: 56px;
+  width: 100%;
   
   border: none;
   background: #9333EA;
@@ -12,6 +13,7 @@ button {
   font-size: 1.125rem;
   line-height: 2;
   font-weight: 600;
+  white-space: nowrap;
 
   cursor: pointer;
   transition: background 0.2s linear;
