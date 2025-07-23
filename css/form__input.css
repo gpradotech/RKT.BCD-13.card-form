@@ -33,11 +33,11 @@
   width: 100%;
 }
 
-.form__input[type="number"] {
+/* .form__input[type="number"] {
   appearance: textfield;
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
-}
+} */
 
 .form__input[type="number"]::-webkit-inner-spin-button,
 .form__input[type="number"]::-webkit-outer-spin-button {
