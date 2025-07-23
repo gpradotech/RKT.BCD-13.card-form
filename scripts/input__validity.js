@@ -38,6 +38,16 @@ export function inputValidity() {
     if (formValidity.value.length === 2) {
       formValidity.value = formValidity.value + '/'
     }
+
+    // Se o primeiro ou o segundo digito for "/", substitua por vazio
+    if (firstNumber === '/' || secondNumber === '/') {
+      formValidity.value = formValidity.value.replace('/', '')
+    }
+
+    // Se o segundo digito for "/", substitua por vazio
+    if (secondNumber === '/') {
+      formValidity.value = formValidity.value.replace('/', '')
+    }
   })
 }
 
